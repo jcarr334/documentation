@@ -18,11 +18,18 @@ api_key_replace = function (){
 				children[j].nodeValue = children[j].nodeValue.replace(
 					"YOUR_API_KEY", user.api_key);
 			}
+/*			if (children[j].nodeType == 3 &&
+				children[j].nodeValue.indexOf("YOU@YOUR_DOMAIN_NAME") > -1) {
+				children[j].nodeValue = children[j].nodeValue.replace(
+					"YOU@YOUR_DOMAIN_NAME", user.email);
+			}
+*/
 			if (children[j].nodeType == 3 &&
 				children[j].nodeValue.indexOf("YOUR_DOMAIN_NAME") > -1) {
 				children[j].nodeValue = children[j].nodeValue.replace(
 					"YOUR_DOMAIN_NAME", user.active_domain);
 			}
+
 		}
 	}
 }
