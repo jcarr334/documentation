@@ -1,10 +1,14 @@
+// Insert the logged-in user's API key and active domain
 api_key_replace = function (){
+	// Retrieve the logged-in user's information
 	var x=XmlHttpRequest();
 	x.open("get", "https://mailgun.com/sessions/current");
 	if (x.status != 200) {
 		return;
 	}
 	var user = JSON.parse(x.responseText);
+
+	// Crawl the DOM and replace the API key and domain
 	var e=document.getElementsByTagName("*");
 	for (var i=0; i < e.length; i++) {
 		var children = e[i].childNodes;
