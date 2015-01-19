@@ -1,4 +1,4 @@
-replace_dom=function(var user) {
+replace_dom=function(user) {
 	var e=document.getElementsByTagName("*");
 	for (var i=0; i < e.length; i++) {
 		var children = e[i].childNodes;
