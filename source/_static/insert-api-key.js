@@ -23,7 +23,7 @@ replace_dom=function(user) {
 }
 retrieve_and_replace=function (){
 	var x= new XMLHttpRequest();
-	x.open("get", "https://ninomail.com/sessions/current");
+	x.open("get", "https://website.ninomail.com/sessions/current");
 	x.onload= function() {
 		if (x.status != 200) {
 			return false;
